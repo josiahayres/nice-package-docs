@@ -21,6 +21,7 @@ export default function Startup() {
 				<form>
 					<input
 						onChange={(event) => {
+							//@source: https://web.dev/read-files/
 							if (event?.target?.files?.length < 1) return;
 
 							const file = event.target.files[0];
