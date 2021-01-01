@@ -112,6 +112,7 @@ export default function Startup() {
 		<Dropzone accept="application/JSON" onDropAccepted={onDrop}>
 			{({ getRootProps, getInputProps }) => (
 				<div {...getRootProps()}>
+					<input {...getInputProps()} />
 					<div className={styles.container}>
 						<Head>
 							<title>package-docs</title>
@@ -120,8 +121,6 @@ export default function Startup() {
 
 						<main className={styles.main}>
 							<h1 className={styles.title}>package-docs</h1>
-
-							<input {...getInputProps()} />
 
 							<p>{fileUploadProgress}</p>
 							<p className={styles.description}>
