@@ -8,7 +8,7 @@ const failure = () => {
 	console.error("Something went wrong");
 };
 
-concurrently([{ command: "npm run start", name: "nextjs" }], {
+concurrently([{ command: "npm run build && npm run start", name: "nextjs" }], {
 	prefix: "name",
 	killOthers: ["failure", "success"],
 	restartTries: 3,
